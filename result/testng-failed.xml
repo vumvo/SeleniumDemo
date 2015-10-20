@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [LOGIN PAGE TEST SUITE]">
+  <parameter name="selenium.url" value="http://dev-lab-web01.sandata.com/"/>
+  <parameter name="selenium.browser" value="iegeorge@sandata.com"/>
+  <parameter name="selenium.implicitTimeout" value="10"/>
+  <listeners>
+    <listener class-name="com.listener.MyListener"/>
+  </listeners>
+  <test name="LOGIN FUNCTION(failed)">
+    <classes>
+      <class name="com.testcase.LoginTestCase">
+        <methods>
+          <include name="setupAfterSuite"/>
+          <include name="setupBeforeSuite"/>
+          <include name="loginWithMismatchElement"/>
+        </methods>
+      </class> <!-- com.testcase.LoginTestCase -->
+    </classes>
+  </test> <!-- LOGIN FUNCTION(failed) -->
+</suite> <!-- Failed suite [LOGIN PAGE TEST SUITE] -->

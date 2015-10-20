@@ -1,0 +1,18 @@
+<suite name="LOGIN PAGE TEST SUITE" verbose="10">
+    <listeners>
+        <listener class-name="com.listener.MyListener" />
+    </listeners>
+    <parameter name="selenium.browser" value="iegeorge@sandata.com" />
+    <parameter name="selenium.url" value="http://dev-lab-web01.sandata.com/" />
+    <parameter name="selenium.implicitTimeout" value="10" />
+    <test name="LOGIN FUNCTION" preserve-order="true">
+        <classes>
+            <class name="com.testcase.LoginTestCase">
+                <methods>
+                    <include name="loginWithValidCredential" />
+                    <include name="loginWithMismatchElement" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

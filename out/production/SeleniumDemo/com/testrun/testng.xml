@@ -1,0 +1,15 @@
+<suite name="LOGIN PAGE TEST SUITE" verbose="10">
+    <parameter name="selenium.browser" value="ff" />
+    <parameter name="selenium.url" value="http://dev-lab-web01.sandata.com/" />
+    <parameter name="selenium.implicitTimeout" value="30" />
+    <test name="LOGIN FUNCTION" preserve-order="true">
+        <classes>
+            <class name="com.testcase.LoginTestCase">
+                <methods>
+                    <include name="loginWithValidCredential" />
+                    <include name="loginWithInvalidCredential" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
