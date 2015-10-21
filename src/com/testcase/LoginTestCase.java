@@ -58,8 +58,8 @@ public class LoginTestCase {
         }
 
         driver.manage().timeouts().implicitlyWait(Integer.parseInt(timeout), TimeUnit.SECONDS);
-        window = new Window(driver);
-        driver.get(seleniumUrl);
+        Window.driver = driver;
+        Window.open(seleniumUrl);
     }
 
     @AfterSuite(alwaysRun = true)

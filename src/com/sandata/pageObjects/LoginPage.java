@@ -1,5 +1,6 @@
 package com.sandata.pageObjects;
 
+import com.utils.Contants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -30,7 +31,7 @@ public class LoginPage{
 	@FindBy(how=How.XPATH, using="//input[@value='Log in']")
 	WebElement btnLogin;
 
-    private int timeout = 10;
+    private int timeout = Contants.timeout;
     	
 	public LoginPage(WebDriver driver){
 		this.driver = driver;
@@ -43,7 +44,7 @@ public class LoginPage{
             txtUserName.sendKeys(uname);
             txtPassword.sendKeys(pwd);
             btnLogin.click();
-            Window.waitForPageLoad(timeout);
+            Window.waitForPageLoad(Contants.timeoutPageload);
 	}
 
     public void loginWithMismatchElement(String uname, String pwd){
@@ -52,7 +53,7 @@ public class LoginPage{
             txtUserName.sendKeys(uname);
             txtPassword2.sendKeys(pwd);
             btnLogin.click();
-            Window.waitForPageLoad(timeout);
+            Window.waitForPageLoad(Contants.timeoutPageload);
         }catch (NoSuchElementException e){
             Reporter.log("khong tim thay element" + pageTitle, true);
         }

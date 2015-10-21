@@ -11,9 +11,8 @@ import com.sandata.pageObjects.LoginPage;
 public class Main {
         public static Window window;
         public static void main(String... args) {
-//            System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32_2.2\\chromedriver.exe");
             WebDriver driver = new FirefoxDriver();
-            window = new Window(driver);
+            Window.driver = driver;
             LoginPage loginPage = PageFactory.initElements(driver,
                     LoginPage.class);
 
