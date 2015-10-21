@@ -1,0 +1,80 @@
+...
+... TestNG 6.9.6 by Cédric Beust (cedric@beust.com)
+...
+
+[TestRunner] Running the tests in 'LOGIN FUNCTION' with parallel mode:false
+[RunInfo] Adding method selector: org.testng.internal.XmlMethodSelector@645d9aa2 priority: 10
+[TestClass] Creating TestClass for [ClassImpl class=com.testcase.LoginTestCase]
+[TestClass] Adding method LoginTestCase.loginWithMismatchElement2()[pri:0, instance:null] on TestClass class com.testcase.LoginTestCase
+[TestClass] Adding method LoginTestCase.loginWithMismatchElement()[pri:0, instance:null] on TestClass class com.testcase.LoginTestCase
+[TestClass] Adding method LoginTestCase.loginWithValidCredential()[pri:0, instance:null] on TestClass class com.testcase.LoginTestCase
+[TestClass] Adding method LoginTestCase.loginWithInvalidCredential(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:null] on TestClass class com.testcase.LoginTestCase
+[TestClass] Adding method LoginTestCase.searchExistingStaff()[pri:0, instance:null] on TestClass class com.testcase.LoginTestCase
+[XmlMethodSelector] Including method com.testcase.loginWithMismatchElement2()
+[XmlMethodSelector] Excluding method com.testcase.loginWithMismatchElement()
+[XmlMethodSelector] Including method com.testcase.loginWithValidCredential()
+[XmlMethodSelector] Including method com.testcase.loginWithInvalidCredential()
+[XmlMethodSelector] Including method com.testcase.searchExistingStaff()
+[TestNG] Running:
+  C:\workspace\SeleniumDemo\SeleniumDemo\testrun\Demo.xml
+
+[Invoker 662289681] Keeping method LoginTestCase.setupBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.testcase.LoginTestCase@7670fb6] for class null
+[Invoker 662289681] Invoking @BeforeSuite LoginTestCase.setupBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+[SuiteRunner] Created 1 TestRunners
+[TestRunner] Running test LOGIN FUNCTION on 1  classes,  included groups:[] excluded groups:[]
+===== Test class
+com.testcase.LoginTestCase
+    @Test LoginTestCase.loginWithMismatchElement2()[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+    @Test LoginTestCase.loginWithMismatchElement()[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+    @Test LoginTestCase.loginWithValidCredential()[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+    @Test LoginTestCase.loginWithInvalidCredential(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+    @Test LoginTestCase.searchExistingStaff()[pri:0, instance:com.testcase.LoginTestCase@7670fb6]
+======
+[Invoker 662289681] Invoking com.testcase.LoginTestCase.loginWithValidCredential
+Current Window Title [George | Login]
+[Invoker 662289681] Invoking com.testcase.LoginTestCase.searchExistingStaff
+
+===============================================
+LOGIN PAGE TEST SUITE
+Total tests run: 6, Failures: 2, Skips: 0
+===============================================
+
+[TestNG] Time taken by org.testng.reporters.EmailableReporter2@7999dcfe: 13 ms
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\testng-failed.xml
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\LOGIN PAGE TEST SUITE\testng-failed.xml
+[TestNG] Time taken by [FailedReporter passed=0 failed=0 skipped=0]: 12 ms
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\junitreports\TEST-com.testcase.LoginTestCase.xml
+[TestNG] Time taken by org.testng.reporters.JUnitReportReporter@2871145b: 11 ms
+[TestNG] Time taken by org.testng.reporters.XMLReporter@669e9a07: 15 ms
+[TestNG] Time taken by org.testng.reporters.jq.Main@72402ecb: 44 ms
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\toc.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\LOGIN FUNCTION.properties
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\index.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\main.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\groups.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-alphabetical.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\classes.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\reporter-output.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\methods-not-run.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\LOGIN PAGE TEST SUITE\testng.xml.html
+Creating C:\workspace\SeleniumDemo\SeleniumDemo\test-output\old\index.html
+[TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@67a7ffb3: 96 ms
