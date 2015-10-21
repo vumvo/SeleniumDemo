@@ -10,14 +10,13 @@ import org.openqa.selenium.support.How;
 /**
  * Created by vumvo on 10/16/2015.
  */
-public class HomePage {
-    private WebDriver driver;
+public class HomePage extends BasePage{
 
     @FindBy(how= How.LINK_TEXT, using="Log out")
     WebElement lnkLogout;
 
     public HomePage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     public void logout(){

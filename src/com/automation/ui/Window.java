@@ -2,14 +2,18 @@ package com.automation.ui;
 
 import com.google.common.base.Function;
 import com.utils.Contants;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.pagefactory.Annotations;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,10 +27,10 @@ import org.testng.ITestContext;
 public class Window {
     public static WebDriver driver;
 
-    public static void initTest(Contants.BrowserType browserName){
+    public static void initTest(String browserName){
         switch  (browserName) {
-            case FF: driver = new FirefoxDriver(); break;
-            case IE:
+            case "ff": driver = new FirefoxDriver(); break;
+            case "ie":
                 System.setProperty("webdriver.ie.driver", "libs\\IEDriverServer.exe");
                 DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
                 ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
@@ -36,7 +40,7 @@ public class Window {
                 //driver = new InternetExplorerDriver(); break;
                 driver = new InternetExplorerDriver(InternetExplorerDriverService.createDefaultService(), ieCapabilities);
                 break;
-            case CHROME:
+            case "chrome":
                 System.setProperty("webdriver.chrome.driver", "libs\\chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
@@ -44,6 +48,9 @@ public class Window {
                 System.err.println("Using default Firefox Driver");
                 driver = new FirefoxDriver();
         }
+        // configure other settings
+        driver.manage().timeouts().implicitlyWait(Contants.timeout,TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Contants.timeoutPageload, TimeUnit.SECONDS);
     }
 
     public static  void open(String url){
@@ -52,10 +59,10 @@ public class Window {
 
     public static void switchToWindowTitle(final String title, int timeout){
         Wait<WebDriver> wait = new WebDriverWait(driver, timeout);
-        wait.until(new ExpectedCondition<Boolean>(){
+        wait.until(new ExpectedCondition<Boolean>() {
             @Override
-            public Boolean apply(WebDriver driver){
-                return  doesWindowTitleExist(title);
+            public Boolean apply(WebDriver driver) {
+                return doesWindowTitleExist(title);
             }
         });
     }
@@ -96,5 +103,21 @@ public class Window {
                 return String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState")).equals("complete");
             }
         });
+    }
+
+    public static void waitForElementVisible(WebElement e, int timeout){
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOf(e));
+
+    }
+
+    public static void waitForElementClickable(WebElement e, int timeout){
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.elementToBeClickable(e));
+    }
+
+    public static void waitForElementClickable(By locator, int timeout){
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 }

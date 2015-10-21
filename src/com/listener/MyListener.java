@@ -7,6 +7,10 @@ import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
 import com.utils.StringHelper;
+
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+
 /**
  * Created by vumvo on 10/20/2015.
  */
@@ -38,9 +42,12 @@ public class MyListener extends TestListenerAdapter{
         String uniqueString = StringHelper.generateUniqueString();
         String fileName=tr.getName()+"_"+uniqueString;
         Picture picture = new Picture();
-        picture.capturePage(Window.driver, "\\test-output", fileName);
+        picture.capturePage(Window.driver, "error-screenshot", fileName);
 
-
+        Throwable e = tr.getThrowable();
+        if (e instanceof NoSuchElementException) {
+            log(e.getMessage());
+        }
     }
 
 //    @Override
